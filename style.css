@@ -1,0 +1,254 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+a.changeToDetails {
+    color: rgb(22, 22, 22);
+    text-decoration: none;
+    min-width: 325px;
+    width: 23%;
+}
+
+h2,
+h3,
+h4 {
+    text-align: center;
+    margin: 14px 0;
+}
+
+h2 {
+    background: linear-gradient(aqua, black);
+    background-size: contain;
+    background-position: bottom;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.8em;
+}
+
+h3 {
+    background: linear-gradient(rgb(4, 0, 255), rgb(187, 0, 0));
+    background-size: contain;
+    background-position: bottom;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.4em;
+}
+
+.container {
+    height: max-content;
+    position: relative;
+    border: 5px solid crimson;
+    border-radius: 20px;
+    margin: 20px 0;
+    background-color: rgb(214, 214, 214);
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    min-width: 100%;
+    transition: .5s;
+}
+
+.faceCache {
+    transition: .5s;
+    min-width: 100%;
+}
+
+.teams,
+.maillots {
+    display: flex;
+    flex-direction: column;
+}
+
+.imgEcusson {
+    width: 30%;
+    align-self: center;
+}
+
+.description {
+    max-height: 200px;
+    width: 100%;
+    min-width: 325px;
+    overflow-y: scroll;
+    padding: 5px;
+}
+
+.description::-webkit-scrollbar {
+    display: none;
+}
+
+.imgTShirt {
+    width: 40%;
+    align-self: center;
+}
+
+.created {
+    text-align: center;
+}
+
+.imgStadium {
+    width: 100%;
+}
+
+span {
+    text-align: center;
+}
+
+.container:hover .card {
+    transform: translateX(-100%);
+}
+
+.container:hover .faceCache {
+    transform: translateX(-100%);
+}
+
+/* design details.php */
+.detailsCard h3 {
+    font-size: 2em;
+}
+
+.detailsTeams {
+    font-size: 2.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.detailsCreated {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailsMaillots {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailsTrophy {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5% 5%;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.detailsBox {
+    display: flex;
+    padding: 0 5%;
+}
+
+.detailsName {
+    width: 30%;
+}
+
+.detailsSocial {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.detailsStadium {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.detailsTeams .imgEcusson {
+    width: 250px;
+    margin: auto;
+}
+
+.detailsMaillots .imgTShirt {
+    width: 300px;
+}
+
+.detailsDescription {
+    padding: 2.5% 5%;
+}
+
+.detailsDescription p {
+    font-size: 1.2em;
+}
+
+.detailsStadium p {
+    padding: 2% 5%;
+    width: 50%;
+    font-size: 1.2em;
+}
+
+.detailsStadium img {
+    width: 50%;
+    object-fit: contain;
+}
+
+.detailsStadium h3 {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.detailsTrophy h3 {
+    width: 100%;
+}
+
+.detailsTrophy span {
+    width: 45%;
+    font-size: 2em;
+    padding: 10px;
+    background: linear-gradient(yellow, purple);
+    color: rgb(31, 31, 31);
+    font-weight: bold;
+    border: solid 1px black;
+    margin-bottom: 10px;
+}
+
+.detailsTrophy i {
+    color: gold;
+}
+
+.detailsLocation h4 {
+    font-size: 1.2em;
+    background: linear-gradient(to right, blue, green);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.detailsSocial img {
+    width: 60px;
+}
+
+.detailsSocial h3 {
+    width: 100%;
+}
+
+i {
+    color: blue;
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+.detailsSocial a {
+    width: 25%;
+    text-align: center;
+}
+
+.detailsBanner img {
+    width: 100%;
+}
+
+.detailsInfoStadium {
+    width: 100%;
+}
