@@ -30,7 +30,7 @@ h2 {
     background: linear-gradient(aqua, black);
     background-size: contain;
     background-position: bottom;
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     font-size: 1.8em;
 }
@@ -39,7 +39,7 @@ h3 {
     background: linear-gradient(rgb(4, 0, 255), rgb(187, 0, 0));
     background-size: contain;
     background-position: bottom;
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     font-size: 1.4em;
 }
@@ -54,15 +54,17 @@ h3 {
     display: flex;
     overflow: hidden;
     cursor: pointer;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        min-width: 100%;
+        transition: .5s;
+    }
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    min-width: 100%;
-    transition: .5s;
-}
+
 
 .faceCache {
     transition: .5s;
@@ -108,27 +110,16 @@ h3 {
 span {
     text-align: center;
 }
-/* scss */
-.container:hover .card {
-    transform: translateX(-100%);
-}
-
-.container:hover .faceCache {
-    transform: translateX(-100%);
-}
-
-
-/* design details.php */
-.detailsCard h3 {
-    font-size: 2em;
-}
-/* fin scss */
-
 
 .detailsTeams {
     font-size: 2.5em;
     display: flex;
     flex-direction: column;
+
+    .imgEcusson {
+        width: 250px;
+        margin: auto;
+    }
 }
 
 .detailsCreated {
@@ -139,6 +130,18 @@ span {
 .detailsMaillots {
     display: flex;
     flex-direction: column;
+
+    .imgTShirt {
+        width: 300px;
+    }
+
+
+}
+
+.detailsCard {
+    h3 {
+        font-size: 2em;
+    }
 }
 
 .detailsTrophy {
@@ -147,6 +150,25 @@ span {
     padding: 2.5% 5%;
     justify-content: space-evenly;
     margin-top: 20px;
+
+    h3 {
+        width: 100%;
+    }
+
+    i {
+        color: gold;
+    }
+
+    span {
+        width: 45%;
+        font-size: 2em;
+        padding: 10px;
+        background: linear-gradient(yellow, purple);
+        color: rgb(31, 31, 31);
+        font-weight: bold;
+        border: solid 1px black;
+        margin-bottom: 10px;
+    }
 }
 
 .detailsBox {
@@ -162,79 +184,49 @@ span {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
+
+    a {
+        width: 25%;
+        text-align: center;
+    }
+
+    img {
+        width: 60px;
+    }
+
+    h3 {
+        width: 100%;
+    }
 }
 
 .detailsStadium {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-}
 
-.detailsTeams .imgEcusson {
-    width: 250px;
-    margin: auto;
-}
+    h3 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 
-.detailsMaillots .imgTShirt {
-    width: 300px;
+    img {
+        width: 50%;
+        object-fit: contain;
+    }
+
+    p {
+        padding: 2% 5%;
+        width: 50%;
+        font-size: 1.2em;
+    }
 }
 
 .detailsDescription {
     padding: 2.5% 5%;
-}
 
-.detailsDescription p {
-    font-size: 1.2em;
-}
-
-.detailsStadium p {
-    padding: 2% 5%;
-    width: 50%;
-    font-size: 1.2em;
-}
-
-.detailsStadium img {
-    width: 50%;
-    object-fit: contain;
-}
-
-.detailsStadium h3 {
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.detailsTrophy h3 {
-    width: 100%;
-}
-
-.detailsTrophy span {
-    width: 45%;
-    font-size: 2em;
-    padding: 10px;
-    background: linear-gradient(yellow, purple);
-    color: rgb(31, 31, 31);
-    font-weight: bold;
-    border: solid 1px black;
-    margin-bottom: 10px;
-}
-
-.detailsTrophy i {
-    color: gold;
-}
-
-.detailsLocation h4 {
-    font-size: 1.2em;
-    background: linear-gradient(to right, blue, green);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.detailsSocial img {
-    width: 60px;
-}
-
-.detailsSocial h3 {
-    width: 100%;
+    p {
+        font-size: 1.2em;
+    }
 }
 
 i {
@@ -243,17 +235,35 @@ i {
     vertical-align: middle;
 }
 
-
-
-.detailsSocial a {
-    width: 25%;
-    text-align: center;
-}
-
-.detailsBanner img {
-    width: 100%;
-}
-
 .detailsInfoStadium {
     width: 100%;
+}
+
+.detailsBanner {
+    img {
+        width: 100%;
+    }
+}
+
+.detailsLocation {
+    h4 {
+        font-size: 1.2em;
+        background: linear-gradient(to right, blue, green);
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.container {
+    &:hover {
+        .card {
+            transform: translateX(-100%);
+        }
+    }
+
+    &:hover {
+        .faceCache {
+            transform: translateX(-100%);
+        }
+    }
 }
